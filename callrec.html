@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeleComm Nig. LTD.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.goog-leapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="body2">
+    <!--header-->
+    <nav>
+        <div class="navbar-2">
+            <img src="Red Minimalist Internet Logo.png" alt="Logo">
+            <a class="navbar-123" href="index.html">TeleComm Nig. LTD.</a>
+        </div>
+        <ul>
+            <li class="topnav">
+                <div class="profile">
+                    <img class="icon1" src="icon23.png" alt="Logo">
+                    <p class="texticon">User Profile</p>
+                </div>
+                <ul id="submenu">
+                    <li><a href="index.html">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!--Body-->
+    <section id="section_1">
+    <h1>Input Call Records</h1>
+    <form action="./database/calldb.php" class="form1" method="post">
+        Call Duration (secs)
+        <input type="number" name="call_duration" placeholder="eg. 15" id="input" required/><br>
+        Call Date
+        <input type="date" name="call_date" id="input" required/>
+        <button type="submit" id="button">Submit</button>
+    </form>
+    </section>
+</body>
+
+</html>
