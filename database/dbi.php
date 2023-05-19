@@ -18,7 +18,7 @@
         $stmt_result = $stmt->get_result();
         $data = $stmt_result->fetch_assoc();
         $stmt_result->num_rows>0;
-        if ($data['phone_number'] > 0) {
+        if ((isset($data['phone_number']))>0) {
             // Duplicate value exists, handle the error or display a message
             echo "<h2>Duplicate value found. Cannot insert.</h2>";
             echo '<button type="button" style="
