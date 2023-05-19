@@ -20,7 +20,15 @@
         $stmt_result->num_rows>0;
         if ($data['phone_number'] > 0) {
             // Duplicate value exists, handle the error or display a message
-            echo "Duplicate value found. Cannot insert.";
+            echo "<h2>Duplicate value found. Cannot insert.</h2>";
+            echo '<button type="button" style="
+            background-color: #717275; 
+            color: white;
+            border-radius: 10px; 
+            text-decoration: none;
+            padding: 10px 20px;
+            border: none; 
+            "><a href="../signup.html">Try again</a></button>';
         } else {
         $stmt = $conn->prepare("insert into customers(customer_name, phone_number, email, dateofbirth, password)
         values(?, ?, ?, ?, ?)");
