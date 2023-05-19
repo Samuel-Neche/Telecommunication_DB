@@ -12,6 +12,16 @@
     if($conn->connect_error){
         die('Failed to connect : '.$conn->connect_error);
     }else{
+        $stmt = $conn->prepare("select * from customers where phone_number = ?");
+        $stmt->bind_param("i", $phoneno);
+        $stmt->execute();
+        $stmt_result = $stmt->get_result();
+        $data = $stmt_result->fetch_assoc();
+        $stmt_result->num_rows>0;
+        if ($data['phone_number'] > 0) {
+            // Duplicate value exists, handle the error or display a message
+            echo "Duplicate value found. Cannot insert.";
+        } else {
         $stmt = $conn->prepare("insert into customers(customer_name, phone_number, email, dateofbirth, password)
         values(?, ?, ?, ?, ?)");
         $stmt->bind_param("sisss", $username, $phoneno, $email, $formattedDate, $password);
@@ -28,5 +38,6 @@
              "><a href="../signin.html">Proceed to next page</a></button>';
         $stmt->close();
         $conn->close();
+        }
     }
 ?>
