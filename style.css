@@ -31,14 +31,14 @@ html{
   scroll-behavior: smooth;
 }
 .body1,.body2{
-  background-image: url("no4.jpg");
+  background-image: url("./images/no4.jpg");
 }
 
 body {
   font-family: var(--body-font-family);
 }
 #section_3{
-  background-image: url("no33.jpg");
+  background-image: url("./images/no33.jpg");
   background-size: cover;
   height: 50rem;
   border-radius: 10px;
