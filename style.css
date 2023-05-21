@@ -30,6 +30,20 @@
 html{
   scroll-behavior: smooth;
 }
+.eyeicon{
+  width: 1rem;
+  cursor: pointer;
+  position: absolute;
+  top: 33.4rem;
+  right: 50.6rem;
+}
+.eyeicon2{
+  width: 1rem;
+  cursor: pointer;
+  position: absolute;
+  top: 19.4rem;
+  right: 50.6rem;
+}
 .body1,.body2{
   background-image: url("./images/no4.jpg");
 }
@@ -56,6 +70,12 @@ body {
   color: var(--link-hover-color);
 }
 #input{
+  padding: 10px;
+  border-radius: 10px;
+  border-style: none;
+  width: 18rem;
+}
+#password{
   padding: 10px;
   border-radius: 10px;
   border-style: none;

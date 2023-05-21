@@ -26,16 +26,18 @@
         </div>
     </nav>
     <section id="section_1">
-    <h1>Log In</h1>
-    <form action="./database/dbh.php" method="post" class="form1">
-        <input type="tel" name="phone_number" placeholder="Phone Number" id="input"/><br>
-        <input type="password" name="password" placeholder="Password" id="input"/>    
-        <button type="submit" id="button">Submit</button>
-    </form>
+        <h1>Log In</h1>
+        <form action="./database/dbh.php" method="post" class="form1">
+            <input type="tel" name="phone_number" placeholder="Phone Number" id="input" /><br>
+            <input type="password" name="password" placeholder="Password" id="password" required />
+            <img src="./images/eye-close.png" alt="Image-Eye" id="eyeicon" class="eyeicon2"><br>
+            <button type="submit" id="button">Submit</button>
+        </form>
 
-    <p id="query">Don't have an account? <a href="signup.html">Sign Up</a></p>
-    <p id="copyright">All rights reserved (c) 2023</p>
+        <p id="query">Don't have an account? <a href="signup.html">Sign Up</a></p>
+        <p id="copyright">All rights reserved (c) 2023</p>
     </section>
+    <script src="app.js"></script>
 </body>
 
 </html>

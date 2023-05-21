@@ -22,12 +22,10 @@
             // Duplicate value exists, handle the error or display a message
             echo "<h2>Duplicate value found. Cannot insert.</h2>";
             echo '<button type="button" style="
-            background-color: #717275; 
             color: white;
             border-radius: 10px; 
             text-decoration: none;
             padding: 10px 20px;
-            border: none; 
             "><a href="../signup.html">Try again</a></button>';
         } else {
         $stmt = $conn->prepare("insert into customers(customer_name, phone_number, email, dateofbirth, password)
@@ -36,13 +34,10 @@
         $stmt->execute();
         echo "registration seccessful";
         echo '<button type="button" style="
-             background-color: #E76F51; 
              border-radius: 10px; 
              text-decoration: none; 
              color: white;
-             padding: 10px 20px;
-             border: none; 
-             
+             padding: 10px 20px;    
              "><a href="../signin.html">Proceed to next page</a></button>';
         $stmt->close();
         $conn->close();
