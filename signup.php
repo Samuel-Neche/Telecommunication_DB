@@ -21,7 +21,7 @@
             <ul>
                 <li><a href="index.html" class="navbar-22">Home</a></li>
                 <li><a href="signup.html" class="navbar-22" id="signuppage">Sign Up</a></li>
-                <li><a href="signin.html" class="navbar-22">Log In</a></li>
+                <li><a href="signin.php" class="navbar-22">Log In</a></li>
             </ul>
         </div>
     </nav>
@@ -40,7 +40,7 @@
                 <input type="submit" value="Submit" name="" id="button">
             </form>
 
-            <p id="query">Already have an account?<a href="signin.html">Login</a></p>
+            <p id="query">Already have an account?<a href="signin.php">Login</a></p>
             <p id="copyright">All rights reserved (c) 2023</p>
         </div>
 

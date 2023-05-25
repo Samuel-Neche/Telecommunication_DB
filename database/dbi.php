@@ -26,21 +26,17 @@
             border-radius: 10px; 
             text-decoration: none;
             padding: 10px 20px;
-            "><a href="../signup.html">Try again</a></button>';
+            "><a href="../signup.php">Try again</a></button>';
         } else {
         $stmt = $conn->prepare("insert into customers(customer_name, phone_number, email, dateofbirth, password)
         values(?, ?, ?, ?, ?)");
         $stmt->bind_param("sisss", $username, $phoneno, $email, $formattedDate, $password);
         $stmt->execute();
-        echo "registration seccessful";
-        echo '<button type="button" style="
-             border-radius: 10px; 
-             text-decoration: none; 
-             color: white;
-             padding: 10px 20px;    
-             "><a href="../signin.html">Proceed to next page</a></button>';
+        echo "registration successful";
+        header("Location: ../signin.php");
         $stmt->close();
         $conn->close();
+        exit();
         }
     }
 ?>

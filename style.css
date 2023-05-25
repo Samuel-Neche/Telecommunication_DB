@@ -41,8 +41,8 @@ html{
   width: 1rem;
   cursor: pointer;
   position: absolute;
-  top: 19.4rem;
-  right: 50.6rem;
+  top: 18.8rem;
+  right: 53rem;
 }
 .body1,.body2{
   background-image: url("./images/no4.jpg");
@@ -158,6 +158,13 @@ nav a {
 
 nav>img {
   height: 10px;
+}
+.input-dis{
+  cursor: default;
+}
+.input-dis2{
+  cursor: default;
+  display: none;
 }
 #query{
   font-size: x-small;

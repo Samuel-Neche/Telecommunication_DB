@@ -17,7 +17,7 @@
     <nav>
         <div class="navbar-2">
             <img src="./images/Red Minimalist Internet Logo.png" alt="Logo">
-            <a class="navbar-123" href="index.html">TeleComm Nig. LTD.</a>
+            <a class="navbar-123" href="indexa.html">TeleComm Nig. LTD.</a>
         </div>
         <ul>
             <li class="topnav">
@@ -36,10 +36,15 @@
     <section id="section_1">
     <h1>Input Call Records</h1>
     <form action="./database/calldb.php" class="form1" method="post">
+        <input type="tel" name="costumer_contact" placeholder="Phone Number" id="input" required/><br>
         Call Duration (secs)
         <input type="number" name="call_duration" placeholder="eg. 15" id="input" required/><br>
+        Call Rate
+        <input type="number" value="10" name="call_rate" id="input" class="input-dis" readonly required/>
         Call Date
         <input type="date" name="call_date" id="input" required/>
+        <input type="number" value="" name="total_price" id="input" class="input-dis2" readonly required/>
+        
         <button type="submit" id="button">Submit</button>
     </form>
     </section>
