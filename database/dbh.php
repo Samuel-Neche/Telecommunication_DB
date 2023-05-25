@@ -28,14 +28,14 @@ if ($con->connect_error) {
              "><a href="../indexa.html">Proceed to next page</a></button>';
         }else{
             echo "<h2>Invalid Contact or password</h2>";
-            echo '<a style="
+            echo '<button type="button" style="
             background-color: #E76F51; 
             border-radius: 10px; 
             text-decoration: none; 
             color: white;
             padding: 10px 20px;
-            border: none;
-            href="../signin.php">Try again</a>';
+            border: none; 
+            "><a href="../signin.php">Try again</a>';
         }
         }else{
             echo "<h2>Invalid Contact or password</h2>";
