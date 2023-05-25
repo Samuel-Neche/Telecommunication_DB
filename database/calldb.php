@@ -4,9 +4,9 @@
     $callrate = $_POST['call_rate'];
     $calldate = $_POST['call_date'];
     $totalp = $_POST['total_price'];
+    $totalp = ($callduration*$callrate);
     $dateTime = new DateTime($calldate);
     $formattedDate = $dateTime->format('Y-m-d');
-    $totalp = ($callduration*$callrate);
     
     //Database Conn
     $conn = new mysqli('localhost', 'root', '', 'tele_communication');
@@ -22,9 +22,9 @@
         if ((isset($data['costumer_contact']))<0) {
             echo "<h2>Please register first.</h2>";
         }else{
-        $stmt = $conn->prepare("insert into calls(costumer_contact, call_duration, call_rate, call_date, total_price)
+        $stmt = $conn->prepare("insert into calls(costumer_contact, call_date, call_duration, call_rate,  total_price)
         values(?, ?, ?, ?, ?)");
-        $stmt->bind_param("iiiii", $costumer_contact, $callduration, $callrate, $formattedDate, $totalp);
+        $stmt->bind_param("isiii", $costumer_contact, $formattedDate, $callduration, $callrate, $totalp);
         $stmt->execute();
         $stmt_result = $stmt->get_result();
         echo "<h1>Insertion successful</h1>";
